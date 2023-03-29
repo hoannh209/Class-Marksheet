@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Assignment2</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+  form {
+    text-align: center;
+  }
+  table, th, td {   
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+  }
+  table {
+    width: 100%;
+  }
+  .btn1 {
+    display: flex;
+    justify-content: center;
+  }
+  .btn2 {
+    display: flex;
+    justify-content: center;
+  }
+  </style>  
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Class Marksheet</h1>
+</div>
+  
+<div class="container">
+  <form>  
+    <label for="Hoten">Họ tên:</label><br>
+    <input type="text" id="Hoten" name="Hoten"><br>
+    <label for="Diemtoan">Điểm Toán:</label><br>
+    <input type="text" id="Diemtoan" name="Diemtoan"><br>
+    <label for="Diemly">Điểm Lý:</label><br>
+    <input type="text" id="Diemly" name="Diemly"><br>
+    <label for="Diemhoa">Điểm Hóa</label><br>
+    <input type="text" id="Diemhoa" name="Diemhoa"><br>
+  </form><br>
+  <div class="btn1">  
+    <button type="button" id="btnNhap" onclick="Nhap()">Nhập</button>
+    <button type="button" id="btnCapnhat" onclick="Capnhat()" style="display: none;">Cập nhật</button>
+  </div><br>
+    <table id="myTable">    
+        <tr>
+            <th class="col-lg-0.5">STT</th>
+            <th class="col-lg-2">Họ tên</th>
+            <th class="col-lg-2">Toán</th>
+            <th class="col-lg-2">Lý</th>
+            <th class="col-lg-2">Hóa</th>
+            <th class="col-lg-2">Trung bình</th>
+            <th class="col-lg-1.5">Thao tác</th>   
+        </tr>
+    </table><br>
+  <div class="btn2">
+    <button type="button" onclick="Tinhtrungbinh()">Tính điểm trung bình</button>&nbsp;&nbsp;
+    <button type="button" onclick="XNhsgioi()">Xác định học sinh giỏi</button>
+  </div>
+  
+</div>
+
+</body>
+</html>
